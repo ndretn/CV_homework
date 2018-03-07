@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<opencv_storage>
+  	<!-- 1 for execute the stereo calibration. 0 otherwise. -->
+  	<Calibration>1</Calibration>
+    	<!-- The name of the calibration files. Used in input if Calibration = 0. --> 			   
+	<Calibration_Data>"../config/stereoCalib.xml"</Calibration_Data>
+ 	<Calibration_Parameters>
+  		<!-- List of the calibration images. -->
+  		<Input_Image>"../config/imageList.xml"</Input_Image> 
+  		<!-- Number of inner corners per a item row and column. -->
+  		<BoardSize_Width>6</BoardSize_Width>
+  		<BoardSize_Height>5</BoardSize_Height>
+  		<!-- The size of a square in millimeters. -->
+  		<Square_Size>120</Square_Size>
+  	 	<!-- How many frames to use for calibration. -->
+ 	 	<Frame_Number>17</Frame_Number>
+  		<!-- 1 for show the images of the calibration. 0 otherwise. -->
+ 	 	<Show_CalibImg>0</Show_CalibImg>
+	</Calibration_Parameters>  
+	<!-- 1 for show the rectified images. 0 otherwise. -->
+  	<Show_Rectified>0</Show_Rectified>
+	<!-- 1 for show the disparity map. 0 otherwise. -->
+  	<Show_Disparity>0</Show_Disparity>
+  	<!-- 1 for show the depth map. 0 otherwise. -->
+  	<Show_Depth>0</Show_Depth>
+	<!-- 1 for filter the point cloud. 0 otherwise. -->
+  	<Filter_PC>0</Filter_PC>
+	<!-- StereoSGBM parameters. -->        
+	<SGBM_Parameters>
+		<SADWindowSize>3</SADWindowSize>		
+		<NumberOfDisparities>256</NumberOfDisparities>
+		<PreFilterCap>63</PreFilterCap>
+		<MinDisparity>70</MinDisparity>
+		<UniquenessRatio>0</UniquenessRatio>
+		<SpeckleWindowSize>200</SpeckleWindowSize>
+		<SpeckleRange>25</SpeckleRange>
+		<Disp12MaxDiff>70</Disp12MaxDiff>
+		<FullDP>1</FullDP>
+		<P1>100</P1>
+		<P2>2000</P2>
+	</SGBM_Parameters>
+</opencv_storage>
